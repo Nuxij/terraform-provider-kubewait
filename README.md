@@ -1,4 +1,4 @@
-# Terraform Provider: kube_wait
+# Terraform Provider: kubewait
 
 A Terraform provider that allows you to wait for Kubernetes resources to meet specific conditions before proceeding with other Terraform operations. Perfect for ensuring cluster readiness, waiting for deployments, and controlling deployment order in complex Kubernetes environments.
 
@@ -284,8 +284,8 @@ See the [examples](./examples/) directory for complete usage examples:
 
 ```bash
 # Clone the repository
-git clone https://github.com/shadowacre/terraform-provider-kubewait
-cd terraform-provider-kubewait
+git clone https://github.com/nuxij/terraform-kubectl-wait
+cd terraform-kubectl-wait
 
 # Download dependencies
 go mod tidy
@@ -309,7 +309,7 @@ This provider is built using the [Terraform Plugin Framework](https://developer.
 ├── provider/                  # Provider implementation
 │   ├── provider.go           # Main provider definition
 │   ├── common_resource.go    # Shared resource functionality
-│   ├── resource_kubectl_wait.go # Generic wait resource
+│   ├── resource_wait.go      # Generic wait resource
 │   ├── resource_nodes.go     # Node-specific wait resource
 │   ├── resource_pods.go      # Pod-specific wait resource
 │   └── resource_*.go         # Other resource-specific implementations
